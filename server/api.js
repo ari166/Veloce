@@ -7,6 +7,7 @@ var price = 50;
 
 var app = express();
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //Stripe payment route
 app.post("/charge", async (req, res) => {
